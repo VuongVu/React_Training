@@ -8,6 +8,6 @@ const Home = () => {
       <Link className='button' to='/battle'>Battle</Link>
     </div>
   );
-}
+};
 
 export default Home;

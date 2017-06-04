@@ -15,6 +15,6 @@ const Nav = () => {
       </li>
     </ul>
   );
-}
+};
 
 export default Nav;

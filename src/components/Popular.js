@@ -12,7 +12,7 @@ const SelectLanguage = (props) => {
         languages.map((language) => {
           return (
             <li 
-              style={language === props.selectedLanguage ? { color: '#d0021b'} : null }
+              style={language === props.selectedLanguage ? { color: '#d0021b' } : null }
               onClick={props.onSelect.bind(null, language)}
               key={language}>
               {language}
@@ -22,7 +22,7 @@ const SelectLanguage = (props) => {
       }
     </ul>
   );
-}
+};
 
 // Stateless Component
 // class SelectLanguage extends Component {
@@ -50,13 +50,13 @@ const SelectLanguage = (props) => {
 SelectLanguage.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired
-}
+};
 
 const RepoGrid = (props) => {
   return (
     <ul className='popular-list'>
-      {
-        props.repos.map((repo, index) => {
+    {
+      props.repos.map((repo, index) => {
         return (
           <li key={repo.name} className='popular-item'>
             <div className='popular-rank'>#{index + 1}</div>
@@ -73,12 +73,12 @@ const RepoGrid = (props) => {
               <li>{repo.stargazers_count} stars</li>
             </ul>
           </li>
-        )
+        );
       })
     }
     </ul>
   );
-}
+};
 
 RepoGrid.propTypes = {
   repos: PropTypes.array.isRequired
