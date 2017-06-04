@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { api } from '../utils/api';
+import Loading from './Loading';
 
 // Stateless functional component
 const SelectLanguage = (props) => {
@@ -82,7 +83,7 @@ const RepoGrid = (props) => {
 
 RepoGrid.propTypes = {
   repos: PropTypes.array.isRequired
-}
+};
 
 class Popular extends Component {
   constructor(props) {
@@ -122,7 +123,7 @@ class Popular extends Component {
         <SelectLanguage 
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage}/>  
-          {!this.state.repos ? <p>LOADING!</p> : <RepoGrid repos={this.state.repos} />}
+          {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
       </div>
     );
   }
